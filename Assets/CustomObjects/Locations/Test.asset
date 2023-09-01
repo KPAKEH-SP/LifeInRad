@@ -21,12 +21,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c2bf7582162ce0a438d9b6b23761a3d4, type: 2}
   - {fileID: 11400000, guid: c2c613b84b3803b49b889f34cd2ccce3, type: 2}
   - {fileID: 11400000, guid: eefde9a21fca7a640bf0ce57d75da576, type: 2}
-  - {fileID: 11400000, guid: 3e4819f8d697b4145a04dcdee72aafb8, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: f60ba64526718ad479cf16cb64ec6ef4, type: 2}
   - {fileID: 11400000, guid: 69da0b7bac62d0a45ad3c80abf68ff07, type: 2}
   - {fileID: 11400000, guid: 15c201b4d6bcb9b4a9937c85cef3c792, type: 2}
   - {fileID: 11400000, guid: 11462d6302460f94182b7abcb13d4d49, type: 2}
   - {fileID: 11400000, guid: 316a4e34c5adedc46abc9101d19cdd7c, type: 2}
   - {fileID: 11400000, guid: 66baa24163eae9d48a665a178a5d118b, type: 2}
+  - {fileID: 11400000, guid: 364c4ccd44657bf4a90f3f53a3051d15, type: 2}
+  - {fileID: 11400000, guid: 364c4ccd44657bf4a90f3f53a3051d15, type: 2}
+  - {fileID: 11400000, guid: 364c4ccd44657bf4a90f3f53a3051d15, type: 2}
+  - {fileID: 11400000, guid: 364c4ccd44657bf4a90f3f53a3051d15, type: 2}
+  - {fileID: 11400000, guid: 50eed3be5e07a2f4d9cd72e9939468f4, type: 2}
+  - {fileID: 11400000, guid: b87456f20e119964fbcd31141816cc5e, type: 2}
+  - {fileID: 11400000, guid: a89c8b03e6abd754f90e3a6f07e88a3c, type: 2}
+  - {fileID: 11400000, guid: 034d40d93ee0f3a42af145fc3cd57ad4, type: 2}
   GeneratedEnemies:
   - {fileID: 11400000, guid: fc7e1adad96655844a0c3335e715a78d, type: 2}

@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class EnemyVariation: ScriptableObject
 {
+    public string EnemyName;
     public List<Armor> Armor;
     public int Hp;
     public int Strength;
-    [Range(0,100)] public int Chance;
 }

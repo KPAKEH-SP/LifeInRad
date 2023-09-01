@@ -5,15 +5,22 @@ using System.Collections;
 
 public class LocationController : MonoBehaviour 
 {
-    public Button NextLocationButton;
-    [SerializeField] private Image _icon;
-    [SerializeField] private LocationPosition _locationPosition;
+    [SerializeField] private NextLocation _nextLocationScript;
+    [SerializeField] private SublocationPosition _sublocationPosition;
+    [SerializeField] private DescriptionController _descriptionController;
     public Coroutine _currentCoroutine;
 
     [Header("Для генерации предметов")]
-    [SerializeField] private List<Location> _locations;
     [SerializeField] private Inventory _inventory;
+    private Sublocation _currentSublocation;
+    private Sublocation _nextSublocation;
     private Location _currentLocation;
+    private LocationButton _currentLocationButton;
+
+    [Header("Для генерации локации")]
+    [SerializeField] private LocationButton _startLocation;
+    [SerializeField] private Image _backGround;
+    [SerializeField] private Image _sublocationIcon;
 
     [Header("Для генерации монстров")]
     [SerializeField] private Enemy _enemy;
@@ -24,19 +31,20 @@ public class LocationController : MonoBehaviour
 
     void Start()
     {
-        GenerateLocation();
+        SetLocation(_startLocation);
     }
 
-    public void GenerateLocation()
+    public void GenerateSubocation()
     {
-        _locationPosition.NextPosition();
+        _sublocationPosition.NextPosition();
         _currentCoroutine = StartCoroutine(ChangeButtonActive());
         _currentEnemy = null;
         _inventory.Clear();
-        _currentLocation = _locations[Random.Range(0, _locations.Count - 1)];
-        _icon.sprite = _currentLocation.Icon;
+        _currentSublocation = _nextSublocation;
+        _sublocationIcon.sprite = _currentSublocation.Icon;
+        _backGround.sprite = _currentSublocation.BackGround;
 
-        GenerateMonster(_currentLocation.GeneratedEnemies);
+        GenerateMonster(_currentSublocation.GeneratedEnemies);
 
 
         if (_currentEnemy == null)
@@ -49,17 +57,30 @@ public class LocationController : MonoBehaviour
             if (_currentCoroutine != null)
                 StopCoroutine(_currentCoroutine);
 
-            NextLocationButton.interactable = false;
+            _nextLocationScript.NextLocationButtonEnabled = false;
         }
+        GenerateNextSublocation();
+    }
+
+    public void GenerateNextSublocation()
+    {
+        _nextSublocation = _currentLocation.Sublocations[Random.Range(0, _currentLocation.Sublocations.Count)];
+        _nextLocationScript.NextLocationButtonText = _nextSublocation.NextLocationButtonTexts[Random.Range(0, _nextSublocation.NextLocationButtonTexts.Count)];
     }
 
     public void GenerateItems()
     {
-        _inventory.Generate(_currentLocation.GeneratedItems);
+        _inventory.Generate(_currentSublocation.GeneratedItems);
         _stateController.SetStateLoot();
+
+        if (_inventory.Slots[0].Filled == false)
+            _descriptionController.GenerateDescription(_currentSublocation.EmptyDescriptions);
+
+        else
+            _descriptionController.GenerateDescription(_currentSublocation.Descriptions);
     }
 
-    public void GenerateMonster(List<EnemyVariation> generatedEnemies)
+    public void GenerateMonster(List<GeneratedEnemiesElement> generatedEnemies)
     {
         foreach (var enemy in generatedEnemies)
         {
@@ -67,12 +88,13 @@ public class LocationController : MonoBehaviour
 
             if (chance <= enemy.Chance)
             {
-                _enemy.Generate(enemy);
-                _enemy.AttackPower = enemy.Strength;
-                _enemy.HealthBar.maxValue = enemy.Hp;
-                _enemy.HealthBar.value = enemy.Hp;
-                _currentEnemy = enemy;
+                _enemy.Generate(enemy.GeneratedEnemy);
+                _enemy.AttackPower = enemy.GeneratedEnemy.Strength;
+                _enemy.HealthBar.maxValue = enemy.GeneratedEnemy.Hp;
+                _enemy.HealthBar.value = enemy.GeneratedEnemy.Hp;
+                _currentEnemy = enemy.GeneratedEnemy;
                 _stateController.SetStateFight();
+                _descriptionController.GenerateDescription(_currentSublocation.EnemyDescriptions);
                 break;
             }
         }
@@ -80,8 +102,20 @@ public class LocationController : MonoBehaviour
 
     private IEnumerator ChangeButtonActive()
     {
-        NextLocationButton.interactable = false;
+        _nextLocationScript.NextLocationButtonEnabled = false;
         yield return new WaitForSeconds(5);
-        NextLocationButton.interactable = true;
+        _nextLocationScript.NextLocationButtonEnabled = true;
+    }
+
+    public void SetLocation(LocationButton locationButton)
+    {
+        if (_currentLocationButton != null)
+            _currentLocationButton.gameObject.GetComponent<Button>().interactable = true;
+        
+        _currentLocationButton = locationButton;
+        _currentLocation = locationButton.LocationObject;
+        _currentLocationButton.gameObject.GetComponent<Button>().interactable = false;
+        _nextSublocation = _currentLocation.Sublocations[Random.Range(0, _currentLocation.Sublocations.Count)];
+        GenerateSubocation();
     }
 }

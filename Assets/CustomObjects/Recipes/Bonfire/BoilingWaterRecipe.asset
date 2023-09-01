@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6da582548c005124e827ff3d3c8d094e, type: 3}
-  m_Name: City
+  m_Script: {fileID: 11500000, guid: 6b5df99ec54888344b05c148b69a7c93, type: 3}
+  m_Name: BoilingWaterRecipe
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
-  Icon: {fileID: 0}
-  GeneratedItems: []
+  Ingredients:
+  - {fileID: 11400000, guid: 316a4e34c5adedc46abc9101d19cdd7c, type: 2}
+  - {fileID: 0}

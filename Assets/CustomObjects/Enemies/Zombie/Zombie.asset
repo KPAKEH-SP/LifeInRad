@@ -18,4 +18,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f2ca97e48165425479c41bfef08a5039, type: 2}
   Hp: 100
   Strength: 10
-  Chance: 20

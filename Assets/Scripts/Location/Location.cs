@@ -1,13 +1,10 @@
-using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 [CreateAssetMenu(fileName = "Location", menuName = "LifeInRad/Location")]
 
-public class Location : ScriptableObject 
+public class Location : ScriptableObject
 {
-    public string Name;
-    public string Description;
-    public Sprite Icon;
-    public List<Item> GeneratedItems;
-    public List<EnemyVariation> GeneratedEnemies;
+    public List<Sublocation> Sublocations;
 }

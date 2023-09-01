@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Pistol
   m_EditorClassIdentifier: 
   Icon: {fileID: 1518363075290452430, guid: 3dcb0bec3be6c454a8d1a684e09043d1, type: 3}
-  Id: 3
-  Chance: 32
-  Power: 10
+  Id: 0
+  WorkbenchItemRecipe: {fileID: 0}
+  BonfireItemRecipe: {fileID: 0}
+  ClearAfterCrafting: 0
+  ItemAfterCrafting: {fileID: 0}
+  Power: 15

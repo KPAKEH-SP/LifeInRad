@@ -4,7 +4,7 @@ using System.ComponentModel.Design;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LocationPosition : MonoBehaviour
+public class SublocationPosition : MonoBehaviour
 {
     [SerializeField] private float _animationSpeed;
     [SerializeField] private Image _positionDisplay;

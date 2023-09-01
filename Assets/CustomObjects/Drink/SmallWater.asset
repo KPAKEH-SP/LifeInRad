@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d26609717d16a43a16a22a53b926bf, type: 3}
   m_Name: SmallWater
   m_EditorClassIdentifier: 
-  ItemRecipe: {fileID: 0}
   Icon: {fileID: 59968103, guid: 19f1f4931833019479139a4baa0af7f4, type: 3}
   Id: 0
-  Chance: 100
+  Chance: 55
+  WorkbenchItemRecipe: {fileID: 0}
+  BonfireItemRecipe: {fileID: 0}
+  ClearAfterCrafting: 1
+  ItemAfterCrafting: {fileID: 0}
   ThirstReplenishment: 100

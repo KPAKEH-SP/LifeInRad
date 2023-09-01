@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0104bc83be8d5a341b9400e0d96a8867, type: 3}
   m_Name: GroundCoffee
   m_EditorClassIdentifier: 
-  ItemRecipe: {fileID: 0}
   Icon: {fileID: 1392848888, guid: 19f1f4931833019479139a4baa0af7f4, type: 3}
   Id: 0
   Chance: 100
+  WorkbenchItemRecipe: {fileID: 0}
+  BonfireItemRecipe: {fileID: 0}
+  ClearAfterCrafting: 1
+  ItemAfterCrafting: {fileID: 0}

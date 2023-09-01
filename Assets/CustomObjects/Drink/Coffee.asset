@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d26609717d16a43a16a22a53b926bf, type: 3}
   m_Name: Coffee
   m_EditorClassIdentifier: 
-  ItemRecipe: {fileID: 11400000, guid: 4043e915f7506f94aa96ddad78fb8e98, type: 2}
   Icon: {fileID: 64882455, guid: 19f1f4931833019479139a4baa0af7f4, type: 3}
   Id: 0
   Chance: 0
+  WorkbenchItemRecipe: {fileID: 11400000, guid: 4043e915f7506f94aa96ddad78fb8e98, type: 2}
+  BonfireItemRecipe: {fileID: 0}
+  ClearAfterCrafting: 0
+  ItemAfterCrafting: {fileID: 0}
   ThirstReplenishment: 0

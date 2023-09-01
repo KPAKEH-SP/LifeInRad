@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5df99ec54888344b05c148b69a7c93, type: 3}
+  m_Name: SpringRcipe
+  m_EditorClassIdentifier: 
+  Ingredients:
+  - {fileID: 11400000, guid: b87456f20e119964fbcd31141816cc5e, type: 2}
+  - {fileID: 11400000, guid: a89c8b03e6abd754f90e3a6f07e88a3c, type: 2}

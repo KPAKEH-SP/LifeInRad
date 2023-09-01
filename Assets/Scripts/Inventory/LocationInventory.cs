@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class LocationInventory : Inventory 
 {
-    public override void Generate(List<Item> generatedItems)
+    public override void Generate(List<GeneratedItemElement> generatedItems)
     {
         foreach (var item in generatedItems)
         {
@@ -15,7 +15,7 @@ public class LocationInventory : Inventory
                 {
                     if (slot.Filled == false)
                     {
-                        slot.Add(item);
+                        slot.Add(item.GeneratedItem);
                         break;
                     }
                 }

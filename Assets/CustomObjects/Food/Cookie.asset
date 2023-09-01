@@ -15,4 +15,8 @@ MonoBehaviour:
   Icon: {fileID: 1792992576, guid: 19f1f4931833019479139a4baa0af7f4, type: 3}
   Id: 0
   Chance: 71
+  WorkbenchItemRecipe: {fileID: 0}
+  BonfireItemRecipe: {fileID: 0}
+  ClearAfterCrafting: 0
+  ItemAfterCrafting: {fileID: 0}
   Nutritional: 5

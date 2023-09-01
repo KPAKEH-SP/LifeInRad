@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class Enemy : Creature
 {
+    [SerializeField] private NextLocation _nextLocationScript;
     [SerializeField] private List<Image> _armor;
     [SerializeField] private StateController _stateController;
     [SerializeField] private LocationController _locationController;
@@ -13,7 +14,7 @@ public class Enemy : Creature
     {
         _stateController.SetStateLoot();
         _locationController.GenerateItems();
-        _locationController.NextLocationButton.interactable = true;
+        _nextLocationScript.NextLocationButtonEnabled = true;
     }
 
     public void Generate(EnemyVariation generatedEnemy)

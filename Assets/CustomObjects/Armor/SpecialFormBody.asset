@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: -1718822826, guid: 1e9255f5fe480c54b907092f981fc3b6, type: 3}
   Id: 1
-  Chance: 8
+  Chance: 100
+  WorkbenchItemRecipe: {fileID: 0}
+  BonfireItemRecipe: {fileID: 0}
+  ClearAfterCrafting: 0
+  ItemAfterCrafting: {fileID: 0}
   Texture: {fileID: -211352364, guid: 1e9255f5fe480c54b907092f981fc3b6, type: 3}
   Protection: 20
   Type: 1

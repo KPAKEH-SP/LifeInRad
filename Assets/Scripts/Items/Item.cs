@@ -2,9 +2,12 @@ using UnityEngine;
 
 public abstract class Item : ScriptableObject 
 {
-    public Recipe ItemRecipe;
     public Sprite Icon;
     public int Id;
-    [Range(0, 100)] public int Chance;
+    [Header("Система крафта")]
+    public WorkbenchRecipe WorkbenchItemRecipe;
+    public BonfireRecipe BonfireItemRecipe;
+    public bool ClearAfterCrafting;
+    public Item ItemAfterCrafting;
     abstract public void Use(Slot UsableSlot);
 }

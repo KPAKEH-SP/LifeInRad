@@ -163,7 +163,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -184,7 +184,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -205,7 +205,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -221,19 +221,19 @@ TextureImporter:
       name: Locations_5
       rect:
         serializedVersion: 2
-        x: 96
-        y: 576
+        x: 0
+        y: 544
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea9fbb3b80fdb95468322f32d02c9998
-      internalID: 72401357
+      spriteID: 0031a1c3494513149acdb1765e35f626
+      internalID: 1699554860
       vertices: []
       indices: 
       edges: []
@@ -242,8 +242,8 @@ TextureImporter:
       name: Locations_6
       rect:
         serializedVersion: 2
-        x: 128
-        y: 576
+        x: 32
+        y: 544
         width: 32
         height: 32
       alignment: 0
@@ -253,8 +253,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9da55c402d4295e4c912a6434ffb4d24
+      spriteID: 3678605008ac15749b88d040c7eeccc6
       internalID: 600233599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locations_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c63609b9ba135041af3ee01a035088a
+      internalID: -682615774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locations_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae882ea28e7cfb41baa732702da4b81
+      internalID: -1640081967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Locations_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2b16f8d6ef3a84f8d493f57386051a
+      internalID: 650001479
       vertices: []
       indices: 
       edges: []
@@ -271,9 +334,12 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Locations_4: -33426541
+      Locations_8: -1640081967
       Locations_1: 1262853243375832970
-      Locations_5: 72401357
+      Locations_5: 1699554860
+      Locations_9: 650001479
       Locations_0: -7713157828157735119
+      Locations_7: -682615774
       Locations_6: 600233599
       Locations_3: 445645424
       Locations_2: -505478092

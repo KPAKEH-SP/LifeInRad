@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 public class PlayerInventory : Inventory
 {
-    public override void Generate(List<Item> generatedItems)
+    public override void Generate(List<GeneratedItemElement> generatedItems)
     {
         
     }

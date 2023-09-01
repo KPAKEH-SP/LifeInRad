@@ -11,11 +11,11 @@ public class CraftSlot : Slot, IDropHandler
     public new void OnDrop(PointerEventData eventData)
     {
         Drop(eventData);
-        CraftController.Singletone.CraftMesh[row].Columns[column] = StorageItem;
+        WorkbenchController.Singletone.CraftMesh[row].Columns[column] = StorageItem;
     }
 
     public void ClearCraftSlot()
     {
-        CraftController.Singletone.CraftMesh[row].Columns[column] = null;
+        WorkbenchController.Singletone.CraftMesh[row].Columns[column] = null;
     }
 }
